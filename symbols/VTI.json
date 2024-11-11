@@ -1,0 +1,7 @@
+{
+  "id": "VTI",
+  "type": "etf",
+  "source": "yahoo_finance",
+  "symbol": "VTI",
+  "currency": "USD"
+}

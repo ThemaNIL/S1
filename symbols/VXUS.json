@@ -1,0 +1,7 @@
+{
+  "id": "VXUS",
+  "type": "etf",
+  "source": "yahoo_finance",
+  "symbol": "VXUS",
+  "currency": "USD"
+}
