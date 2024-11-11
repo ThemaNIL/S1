@@ -4,7 +4,7 @@ on:
     - cron: '0 * * * *'
   push:
     branches:
-      - main  # Ensure this is your correct default branch
+      - master
   workflow_dispatch:
 
 concurrency:
@@ -16,13 +16,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Configure Git
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
 
       - uses: actions/setup-python@v5
         with:
@@ -36,9 +29,6 @@ jobs:
       - name: Run Sync
         run: |
           python3 main.py
-
-      - name: Check git status
-        run: git status
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
