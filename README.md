@@ -29,25 +29,24 @@ The script looks under the `/symbols` dir, you can find the `.json` files I'm tr
 Take a look at the `main.py` script to understand how the values are being fetched and stored. You can customize it to your needs to scrape more resources.
 
 
-### URLs
-Once your project is deployed on GitHub Pages, the symbol value can be accessed with the following convention:
-- symbol recent price - `https://<github username>.github.io/stonks/<symbol id>/price`
-- symbol price date - `https://<github username>.github.io/stonks/<symbol id>/date`
-- symbol price currency - `https://<github username>.github.io/stonks/<symbol id>/currency`
-- general symbol info json - `https://<github username>.github.io/stonks/<symbol id>/info.json`
+
 
 Let's take the ZPRX symbol for example:
-- recent price - https://jossef.github.io/stonks/ZPRX/price
-- price date - https://jossef.github.io/stonks/ZPRX/date
-- price currency - https://jossef.github.io/stonks/ZPRX/currency
-- general symbol info json - https://jossef.github.io/stonks/ZPRX/info.json
+- recent price - https://themanil.github.io/S1/VTI/price
+- price date - https://themanil.github.io/S1/VTI/date
+- price currency - https://themanil.github.io/S1/VTI/currency
+- general symbol info json - https://themanil.github.io/S1/VTI/info.json
 
 ### Google Sheets Integration
 
 Within your Google sheets document, you can use the `IMPORTDATA` function to fetch the data from the URLs above.
 
 ```
-=IMPORTDATA("https://jossef.github.io/stonks/ZPRX/price")
+=IMPORTDATA("https://themanil.github.io/S1/VTI/price")
+
+IF the price in EUR , USE * GOOGLEFINANCE("CURRENCY:EURUSD") 
+for example:
+=IMPORTDATA("https://themanil.github.io/S1/IMID/price") * GOOGLEFINANCE("CURRENCY:EURUSD")
 ```
 
 or if you want to keep your symbols in a separate column, you can use the `CONCATENATE` function to build the URL dynamically.
