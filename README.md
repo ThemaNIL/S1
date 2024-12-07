@@ -31,7 +31,7 @@ Take a look at the `main.py` script to understand how the values are being fetch
 
 
 
-Let's take the ZPRX symbol for example:
+Let's take the VTI symbol for example:
 - recent price - https://themanil.github.io/S1/VTI/price
 - price date - https://themanil.github.io/S1/VTI/date
 - price currency - https://themanil.github.io/S1/VTI/currency
